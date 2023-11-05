@@ -9,6 +9,7 @@ pipeline {
                 sh 'cd jenkins && ls -ltr'
                 sh 'sudo docker ps'
                 sh 'sudo docker images'
+                sudo docker build -t ikunginx01 .
                 sh 'ls -ltr'
               
             }
