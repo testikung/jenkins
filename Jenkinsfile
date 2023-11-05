@@ -9,6 +9,8 @@ pipeline {
                 sh 'cd jenkins && ls -ltr'
                 sh 'sudo docker ps'
                 sh 'sudo docker images'
+                sh 'sudo docker stop ikunginx01'
+                sh 'sudo docker rm ikunginx01'
                 sh 'sudo docker build -t ikunginx01 .'
                 sh 'sudo docker run -dit --name ikunginx01 -p8022:80 ikunginx01'
                 sh 'ls -ltr'
