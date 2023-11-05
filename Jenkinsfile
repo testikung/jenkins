@@ -8,6 +8,7 @@ pipeline {
                 sh 'git clone https://github.com/testikung/jenkins.git'
                 sh 'cd jenkins && ls -ltr'
                 sh 'sudo docker ps'
+                sh 'sudo docker images'
                 sh 'ls -ltr'
               
             }
