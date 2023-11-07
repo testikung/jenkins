@@ -21,7 +21,7 @@ stage('Docker Image Creation')                                                  
             }
         }
 stage('Tag Image')                                                                                                                        {                                                                                                                                         steps{
-               sh 'sudo docker image tag susigughnginx01 susigugh/susigughnginx01:1.0'                                                                }
+               sh 'sudo docker image tag ikunginx01 ikunginx/ikunginx01:1.0'                                                                }
         }
     }
 }  
