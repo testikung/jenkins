@@ -9,7 +9,9 @@ pipeline {
                 sh 'cd jenkins && ls -ltr'
                 }
 }
-stage('Docker Image Creation')                                                                                                            {                                                                                                                                         steps{ 
+stage('Docker Image Creation')                                                                                                           
+ {                                                                                                                                        
+ steps{ 
                 sh 'sudo docker ps'
                 sh 'sudo docker images'
                 sh 'sudo docker stop ikunginx01'
@@ -20,8 +22,12 @@ stage('Docker Image Creation')                                                  
               
             }
         }
-stage('Tag Image')                                                                                                                        {                                                                                                                                         steps{
-               sh 'sudo docker image tag ikunginx01 ikunginx/ikunginx01:1.0'                                                                }
+stage('Tag Image')                                                                                                                       
+ {                                                                                                                                         
+
+steps{
+               sh 'sudo docker image tag ikunginx01 ikunginx/ikunginx01:1.0'                                                              
+  
         }
     }
 stage('Push Image to Docker Hub')
