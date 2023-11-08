@@ -36,7 +36,12 @@ steps{
 sh 'sudo docker login -u=${udockerikung} -p=${pdockerikung} && sudo docker push cham58/ikunginx01:1.0'
 }
 }  
-
+stage('AWS Setup')
+{
+steps
+{
+sh 'terraform init'
+sh 'terraform apply -auto-approve'
+sh 'terraform destroy -auto-approve'
 }
 }
- 
