@@ -26,14 +26,14 @@ stage('Tag Image')
  {                                                                                                                                         
 
 steps{
-               sh 'sudo docker image tag ikunginx01 ikunginx/ikunginx01:1.0'                                                              
+               sh 'sudo docker image tag ikunginx01 cham58/ikunginx01:1.0'                                                              
   
         }
     }
 stage('Push Image to Docker Hub')
 {
 steps{
-sh 'sudo docker login -u=${udockerikung} -p=${pdockerikung} && sudo docker push ikunginx/ikunginx01:1.0'
+sh 'sudo docker login -u=${udockerikung} -p=${pdockerikung} && sudo docker push cham58/ikunginx01:1.0'
 }
 }  
 
