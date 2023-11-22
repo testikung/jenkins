@@ -42,7 +42,7 @@ stage('Kubernetes Deploy')
 	{
         sh 'chmod 600 jmtksrv01.pem'
 	sh 'scp -i jmtksrv01.pem -o StrictHostKeyChecking=no kub01.yml ec2-user@3.109.133.86:/home/ec2-user/'
-sh 'ssh -i jmtksrv01.pem -o StrictHostKeyChecking=no ec2-user@e3.109.133.86 "kubectl create -f kub01.yml"'
+sh 'ssh -i jmtksrv01.pem -o StrictHostKeyChecking=no ec2-user@ 3.109.133.86 "kubectl create -f kub01.yml"'
 	}
 	}
 
